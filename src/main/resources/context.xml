@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- The below tag is for Annotation - Comment Bean tags to use Annotation -->
+	 <context:component-scan base-package="com.capgemini.app"/> 
+	<util:list id="boardMember">
+		<value>Bhai </value>
+		<value> Nikhil</value>
+		<value> Harish</value>
+	</util:list>
+	<util:map id="branchManager">
+		<entry key="India" value="Pavan"></entry>
+		<entry key="Australia" value="Anjan"></entry>
+		<entry key="Srilanka" value="Shan"></entry>
+	</util:map>
+	<util:set id="cities">
+		<value>Hyd</value>
+		<value>Mumbai</value>
+		<value>Delhi</value>
+	</util:set>
+	<util:properties location="classpath:ipaddress.properties" id="properties"></util:properties>
+		<bean class="java.time.LocalDate" factory-method="parse" id="localdate">
+		<constructor-arg value="1996-12-04"> </constructor-arg></bean>
+		</beans>
+
+	<!-- <bean id="organization"
+		class="com.capgemini.app.bean.Organization">
+		<property name="boardMembers" ref="boardMember"></property>
+		<property name="branchManagers" ref="branchManager"></property>
+		<property name="cities" ref="cities"></property>
+		<property name="dateOfEstablishment">
+		<bean class="java.time.LocalDate" factory-method="parse">
+		<constructor-arg value="1996-12-04"> </constructor-arg></bean></property>
+		<property name="ipAddresses">
+		<util:properties location="classpath:ipaddress.properties"></util:properties></property>
+		<property name="listed" value="true"></property>
+		<property name="name" value="Cognizant"></property>
+		<property name="orgId" value="166042"></property>
+		<property name="shareValue" value="100000"></property>
+	</bean>
+
+	<bean id="organization2"
+		class="com.capgemini.app.bean.Organization">
+		<constructor-arg value="" />
+		<constructor-arg ref="" />
+	</bean> -->
+
+
+
+
+
+
+
